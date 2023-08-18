@@ -89,11 +89,11 @@ namespace FreshdeskApi.Client.Solutions
         /// <param name="cancellationToken"></param>
         ///
         /// <returns>The contents of the category after the update</returns>
-        [Obsolete("Use " + nameof(UpdateCategoryAsync) + " with languageCode parameter instead.")]
-        Task<Category> UpdateCategoryAsync(
-            long categoryId,
-            UpdateCategoryRequest request,
-            CancellationToken cancellationToken = default) => UpdateCategoryAsync(categoryId, languageCode: null, request, cancellationToken);
+        //[Obsolete("Use " + nameof(UpdateCategoryAsync) + " with languageCode parameter instead.")]
+        //Task<Category> UpdateCategoryAsync(
+        //    long categoryId,
+        //    UpdateCategoryRequest request,
+        //    CancellationToken cancellationToken = default);// => UpdateCategoryAsync(categoryId, languageCode: null, request, cancellationToken);
 
         /// <summary>
         /// Update a category, changing the description, portals it's visible on or the name 
@@ -117,12 +117,12 @@ namespace FreshdeskApi.Client.Solutions
         /// <param name="cancellationToken"></param>
         ///
         /// <returns>The contents of the category after the update</returns>
-        [Obsolete("Use " + nameof(UpdateCategoryAsync) + " with languageCode parameter on second position instead.")]
-        Task<Category> UpdateCategoryAsync(
-            long categoryId,
-            UpdateCategoryRequest request,
-            string? languageCode = null,
-            CancellationToken cancellationToken = default) => UpdateCategoryAsync(categoryId, languageCode, request, cancellationToken);
+        ////[Obsolete("Use " + nameof(UpdateCategoryAsync) + " with languageCode parameter on second position instead.")]
+        //Task<Category> UpdateCategoryAsync(
+        //    long categoryId,
+        //    UpdateCategoryRequest request,
+        //    string? languageCode = null,
+        //    CancellationToken cancellationToken = default); //=> UpdateCategoryAsync(categoryId, languageCode, request, cancellationToken);
 
         /// <summary>
         /// Update a category, changing the description, portals it's visible on or the name 
@@ -424,12 +424,12 @@ namespace FreshdeskApi.Client.Solutions
         /// <returns>
         /// The updated article (translated if languageCode is passed)
         /// </returns>
-        [Obsolete("Use " + nameof(UpdateArticleAsync) + " with languageCode parameter on second position instead.")]
-        Task<Article> UpdateArticleAsync(
-            long articleId,
-            UpdateArticleRequest request,
-            string? languageCode = null,
-            CancellationToken cancellationToken = default) => UpdateArticleAsync(articleId, languageCode, request, cancellationToken);
+        //[Obsolete("Use " + nameof(UpdateArticleAsync) + " with languageCode parameter on second position instead.")]
+        //Task<Article> UpdateArticleAsync(
+        //    long articleId,
+        //    UpdateArticleRequest request,
+        //    string? languageCode = null,
+        //    CancellationToken cancellationToken = default);// => UpdateArticleAsync(articleId, languageCode, request, cancellationToken);
 
         /// <summary>
         /// Update an article (or it's translation) with the requested data.
