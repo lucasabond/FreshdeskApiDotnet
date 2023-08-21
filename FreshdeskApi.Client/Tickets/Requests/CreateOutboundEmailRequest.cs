@@ -14,7 +14,7 @@ namespace FreshdeskApi.Client.Tickets.Requests
     {
         public CreateOutboundEmailRequest(TicketStatus status, TicketPriority priority, string subject, string description,
             string email, long emailConfigId, string? requesterName = null, string[]? ccEmails = null,
-            Dictionary<string, object>? customFields = null, DateTimeOffset? dueBy = null,
+            object? customFields = null, DateTimeOffset? dueBy = null,
             DateTimeOffset? firstResponseDueBy = null, long? groupId = null, string[]? tags = null,
             string? ticketType = null,
             IEnumerable<FileAttachment>? files = null)
@@ -91,7 +91,7 @@ namespace FreshdeskApi.Client.Tickets.Requests
         /// Key value pairs containing the names and values of custom fields.
         /// </summary>
         [JsonProperty("custom_fields")]
-        public Dictionary<string, object>? CustomFields { get; }
+        public object? CustomFields { get; }
 
         /// <summary>
         /// Timestamp that denotes when the ticket is due to be resolved.
